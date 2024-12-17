@@ -1,3 +1,7 @@
+body {
+    background-color: gray;
+}
+
 h1 {
     text-align: center;
 }
@@ -44,4 +48,51 @@ h1 {
 @keyframes text-peek {
     25% {  transform: rotateX(30deg) translateY(10px) rotate(-13deg); }
     50% { transform: translateY(-22px) rotate(3deg) scale(1.1);  }
+}
+
+.pulse-container h1 {
+    color: purple;
+    font-size: 32px;
+    padding-top: 12px;
+}
+
+.pulse {
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 15rem;
+    
+    circle {
+        fill: #ff5154;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: 50% 50%;
+        animation: pulse 2s cubic-bezier(.5,.5,0,1);
+        
+        &:nth-child(2) {
+            fill: #7fc6a4;
+            animation: pulse 2s 0.75s cubic-bezier(.5,.5,0,1);
+        }
+        
+        &:nth-child(3) {
+            fill: #e5f77d;
+            animation: pulse 2s 1.5s cubic-bezier(.5,.5,0,1);
+        }
+        
+    }
+    
+}
+
+@keyframes pulse {
+    
+    25% {
+        opacity: 0.4;
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+    
 }
