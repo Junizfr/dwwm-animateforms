@@ -8,6 +8,7 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 64px;
+    margin-bottom: 32px;
 }
 
 .form {
@@ -30,4 +31,17 @@ h1 {
     border-radius: 0%;
     background-color: black;
     transform: rotate(0deg);
+}
+
+.text-peek {	 
+    animation: text-peek 3s infinite 1s;
+    color: purple;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+@keyframes text-peek {
+    25% {  transform: rotateX(30deg) translateY(10px) rotate(-13deg); }
+    50% { transform: translateY(-22px) rotate(3deg) scale(1.1);  }
 }
