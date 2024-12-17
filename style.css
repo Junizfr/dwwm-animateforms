@@ -1,4 +1,8 @@
-.container {
+h1 {
+    text-align: center;
+}
+
+.element {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -6,22 +10,22 @@
     gap: 64px;
 }
 
-div:not(.container) {
+.form {
     width: 100px;
     height: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
 }
 
-.form {
-    background-color: black;
-}
-div:not(.container):hover {
+.form:hover {
     transition: all 1s;
     border-radius: 50%;
     background-color: purple;
     transform: rotate(180deg);
 }
 
-div:not(.container):not(:hover) {
+.form:not(:hover) {
     transition: all 1s;
     border-radius: 0%;
     background-color: black;
